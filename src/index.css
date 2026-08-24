@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forge-bg: #f8f5f0;
+  --color-forge-card: #ffffff;
+  --color-forge-border: #e8e2d9;
+  --color-forge-muted: #e2e0db;
+  --color-forge-cream: #eee9e0;
+  --color-forge-warm: #f1ede6;
+  --color-forge-dark: #0f172a;
+  --color-forge-amber: #f59e0b;
+  --color-forge-amber-light: #fbbf24;
+
+  --font-display: "Georgia", "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --animate-modal-in: modal-in 0.2s ease-out;
+
+  @keyframes modal-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95) translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+}
+
+::selection {
+  background: rgba(245, 158, 11, 0.2);
+}
+
+body {
+  margin: 0;
+  background: #f8f5f0;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
