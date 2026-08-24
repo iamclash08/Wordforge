@@ -81,7 +81,7 @@ export default function App() {
     const q = search.toLowerCase();
     return words.filter(
       (w) =>
-        w.word.toLowerCase().includes(q) ||
+        w.word.toLowerCase().startsWith(q) ||
         w.meaning.toLowerCase().includes(q) ||
         (w.example && w.example.toLowerCase().includes(q))
     );
